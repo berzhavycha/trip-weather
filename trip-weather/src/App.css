@@ -1,0 +1,81 @@
+.main-page {
+  display: flex;
+}
+
+.main-page .trips-content {
+  width: 70%;
+  padding: 40px 60px;
+}
+
+.trips-content h1 {
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.error {
+  color: red;
+}
+
+.sign-section-shell {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-section-shell.open {
+  display: flex;
+}
+
+.sign-section-shell .sign-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  transform: scale(0);
+}
+
+.sign-section-shell.open .sign-section {
+  transform: scale(1);
+  animation: signAnimation .2s linear forwards;
+}
+
+@keyframes signAnimation {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+
+
+/*============================= MEDIA ========================*/
+
+@media screen and (max-width: 590px) {
+  .main-page .trips-content {
+    padding: 40px 55px;
+  }
+
+  .trips-content h1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .trips-content h1 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .main-page .trips-content {
+    padding: 40px 45px;
+  }
+}

@@ -1,0 +1,245 @@
+.modal-window-shell {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal-window-shell.zoomIn {
+    display: flex;
+}
+
+.modal-window-shell .modal-window-inner {
+    background-color: white;
+    width: 50vw;
+    border-radius: 10px;
+    transform: scale(0);
+}
+
+.modal-window-shell.zoomIn .modal-window-inner {
+    animation: zoomIn 0.25s ease forwards;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+
+.modal-window-shell.zoomOut .modal-window-inner {
+    animation: zoomOut 0.25s ease forwards;
+}
+
+@keyframes zoomOut {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0);
+    }
+}
+
+
+.modal-window-inner .modal-window-top {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.modal-window-inner .modal-window-top button {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: gray;
+}
+
+.modal-window-inner .modal-form {
+    padding: 50px 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal-window-inner .modal-form .form-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-window-inner .modal-form .form-block label {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.modal-window-inner .modal-form .form-block select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--gray);
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: gray;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('../../../public//images//arrow-down.png');
+    background-position: 98.5% center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+
+.modal-window-inner .modal-form .form-block select::-ms-expand {
+    display: none;
+}
+
+.modal-window-inner .modal-form .form-block select.error {
+    border-color: red;
+}
+
+.modal-window-inner .modal-form .form-block input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--gray);
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: gray;
+}
+
+.modal-window-inner .modal-form .form-block input.error {
+    border-color: red;
+}
+
+.modal-window-inner .modal-form .form-block .error-message {
+    color: red;
+    padding-left: 5px;
+    font-size: 14px;
+}
+
+.modal-window-inner .modal-form .form-block .date-input {
+    position: relative;
+}
+
+.modal-form .form-block .date-input .calendar-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    background-color: white;
+    width: 20px;
+    color: gray;
+    cursor: pointer;
+}
+
+.modal-window-inner .modal-window-bottom {
+    margin-top: 50px;
+    padding: 20px 0 20px;
+    border-top: 1px solid var(--light-gray);
+    text-align: right;
+}
+
+.modal-window-inner .modal-window-bottom .cancel {
+    margin-right: 20px;
+    border: 1px solid gray;
+    background: transparent;
+    font-size: 15px;
+    padding: 7px 20px;
+    cursor: pointer;
+    transition: var(--linear-transition);
+}
+
+.modal-window-inner .modal-window-bottom .cancel:hover {
+    background-color: gray;
+    color: white;
+}
+
+.modal-window-inner .modal-window-bottom .save {
+    background: var(--blue);
+    font-size: 15px;
+    padding: 7px 20px;
+    cursor: pointer;
+    transition: var(--linear-transition);
+    border: 1px solid var(--blue);
+    outline: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.modal-window-inner .modal-window-bottom .save:hover {
+    background-color: var(--dark-blue);
+    border-color: var(--dark-blue);
+}
+
+/*=============================== MEDIA ==================================*/
+
+@media screen and (max-width: 901px) {
+    .modal-window-shell .modal-window-inner {
+        width: 55vw;
+    }
+
+    .modal-window-inner .modal-window-top {
+        padding: 10px 20px;
+    }
+
+    .modal-window-inner .modal-window-top h2{
+        font-size: 22px;
+    }
+
+    .modal-window-inner .modal-window-top button{
+        font-size: 15px;
+    }
+
+    .modal-window-inner .modal-form {
+        padding: 30px 20px 0;
+    }
+
+    .modal-window-inner .modal-form .form-block label {
+        font-size: 15px;
+    }
+    
+    .modal-window-inner .modal-form .form-block select {
+        padding: 8px;
+    }
+    
+    .modal-window-inner .modal-form .form-block input {
+        padding: 8px;
+    }
+    
+    .modal-window-inner .modal-window-bottom {
+        margin-top: 30px;
+    }
+    
+    .modal-window-inner .modal-window-bottom .cancel {
+        margin-right: 15px;
+        font-size: 14px;
+        padding: 7px 15px;
+    }
+    
+    .modal-window-inner .modal-window-bottom .save {
+        font-size: 14px;
+        padding: 7px 15px;     
+    }
+}
+
+@media screen and (max-width: 901px) {
+    .modal-window-shell .modal-window-inner {
+        width: 80vw;
+    }
+}

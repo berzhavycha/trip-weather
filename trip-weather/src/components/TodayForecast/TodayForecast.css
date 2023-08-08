@@ -1,0 +1,313 @@
+.todays-forecast {
+    width: 30%;
+    background-image: url('../../../public/images/cloud\(1\).png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+}
+
+.user-photo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.user-photo button {
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    width: 80px;
+    padding: 5px;
+    background-color: var(--light-blue);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transform: translateX(200%);
+}
+
+.user-photo button.active {
+    transform: translateY(0);
+    animation: logOutButtonAnimation .2s linear forwards;
+}
+
+@keyframes logOutButtonAnimation {
+    from {
+        transform: translateX(200%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.user-photo img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.todays-forecast .select-trip-title {
+    font-size: 40px;
+    color: rgb(202, 198, 198);
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    letter-spacing: 1.5px;
+}
+
+.today-forecase-inner {
+    margin-top: 100px;
+    scale: 0;
+    opacity: 0;
+}
+
+.today-forecase-inner.open {
+    scale: 1;
+    opacity: 1;
+    animation: todayForecastAnimation 0.5s ease forwards;
+}
+
+@keyframes todayForecastAnimation {
+    from {
+        scale: 0;
+    }
+
+    to {
+        scale: 1;
+    }
+}
+
+.today-forecase-inner h1 {
+    color: white;
+    letter-spacing: 1px;
+}
+
+.today-forecase-inner .weather-info {
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.today-forecase-inner .weather-info img {
+    width: auto;
+    height: 50px;
+}
+
+.today-forecase-inner .weather-info h1 {
+    font-size: 60px;
+    color: white;
+    font-weight: 500;
+    position: relative;
+}
+
+.today-forecase-inner .weather-info h1 p {
+    position: absolute;
+    top: -10px;
+    right: -25px;
+    font-size: 25px;
+}
+
+.today-forecase-inner .city {
+    font-size: 30px;
+    font-weight: 300;
+    color: white;
+}
+
+.todays-forecast .time-left {
+    display: flex;
+    gap: 60px;
+    color: white;
+    padding-top: 100px;
+}
+
+.todays-forecast .time-left .time-block {
+    width: 25%;
+}
+
+.todays-forecast .time-left .time-block span {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.todays-forecast .time-left .time-block p {
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/*============================= MEDIA ========================*/
+
+@media screen and (max-width: 1285px) {
+    .todays-forecast .time-left {
+        gap: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .today-forecase-inner h1 {
+        font-size: 28px;
+    }
+
+    .today-forecase-inner .weather-info img {
+        height: 40px;
+    }
+
+    .today-forecase-inner .weather-info h1 {
+        font-size: 50px;
+    }
+
+    .today-forecase-inner .weather-info h1 p {
+        font-size: 22px;
+    }
+
+    .today-forecase-inner .city {
+        font-size: 25px;
+    }
+
+}
+
+@media screen and (max-width: 1090px) {
+    .todays-forecast .time-left {
+        gap: 20px;
+    }
+
+    .todays-forecast .time-left .time-block span {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 901px) {
+    .todays-forecast {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 100;
+        width: 50%;
+        box-shadow: 0 0px 20px black;
+    }
+
+    @keyframes todayForecastAnimation {
+        from {
+            transform: translateX(150%);
+        }
+
+        to {
+            transform: translateX(0%);
+        }
+    }
+
+    .todays-forecast.open {
+        display: flex;
+        right: 0;
+        animation: todayForecastAnimation 0.2s ease-in forwards;
+    }
+
+    .todays-forecast button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: var(--light-gray);
+        padding: 10px 13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: var(--linear-transition);
+    }
+
+    .todays-forecast button:hover {
+        background-color: var(--light-blue);
+        color: white;
+    }
+
+    .today-forecase-inner h1 {
+        font-size: 30px;
+    }
+
+    .today-forecase-inner .weather-info img {
+        height: 50px;
+    }
+
+    .today-forecase-inner .weather-info h1 {
+        font-size: 60px;
+    }
+
+    .today-forecase-inner .weather-info h1 p {
+        font-size: 25px;
+    }
+
+    .today-forecase-inner .city {
+        font-size: 30px;
+    }
+
+    .todays-forecast .time-left {
+        gap: 50px;
+    }
+
+    .todays-forecast .time-left .time-block span {
+        font-size: 25px;
+    }
+
+}
+
+@media screen and (max-width: 746px) {
+    .todays-forecast {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .todays-forecast .time-left {
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .todays-forecast .time-left {
+        gap: 20px;
+    }
+
+    .today-forecase-inner h1 {
+        font-size: 28px;
+    }
+
+    .today-forecase-inner .weather-info img {
+        height: 40px;
+    }
+
+    .today-forecase-inner .weather-info h1 {
+        font-size: 50px;
+    }
+
+    .today-forecase-inner .weather-info h1 p {
+        font-size: 22px;
+    }
+
+    .today-forecase-inner .city {
+        font-size: 25px;
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+    .todays-forecast {
+        width: 80%;
+    }
+}

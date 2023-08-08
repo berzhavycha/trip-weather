@@ -1,0 +1,66 @@
+.trip-forecast{
+    margin-top: 30px;
+}
+
+.trip-forecast h2{
+    margin-bottom: 40px;
+    font-family: 'Roboto Condense', sans-serif;
+    font-weight: 400;
+}
+
+.trip-forecast .forecast-container{
+    display: flex;
+    gap: 0px;
+}
+
+.trip-forecast .day-forecast{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.trip-forecast .day-forecast img{
+    height: 65px;
+    width: auto;
+    object-fit: cover;
+    margin: 15px 0 15px;
+}
+
+.trip-forecast .day-forecast p{
+    font-size: 15px;
+    color: gray;
+    font-weight: 300;
+}
+
+.trip-forecast .day-forecast .temp{
+    font-weight: 500;
+    color: black;
+    font-size: 14px;
+}
+
+/*================================= MEDIA ======================================*/
+
+@media screen and (max-width: 1030px) {
+    .trip-forecast .day-forecast img{
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .trip-forecast .day-forecast img{
+        height: 55px;
+    }
+}
+
+@media screen and (max-width: 761px) {
+    .trip-forecast .day-forecast img{
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .trip-forecast .day-forecast img{
+        height: 45px;
+    }
+}

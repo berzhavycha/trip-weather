@@ -1,0 +1,157 @@
+.trip-item {
+    min-width: 14vw;
+}
+
+.trip-item:last-child {
+    margin-right: 20px;
+}
+
+.trip-item .trip-image img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.trip-item .trip-info {
+    padding: 20px 20px;
+    border: 2px solid var(--light-gray);
+    transition: var(--linear-transition);
+}
+
+.trip-item .trip-info .city-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.trip-item .trip-info .time {
+    color: gray;
+    font-size: 14px;
+}
+
+.trip-info button {
+    background-color: var(--light-gray);
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--linear-transition);
+    display: none;
+}
+
+.trip-info button:hover {
+    background-color: var(--light-blue);
+    color: white;
+}
+
+.trip-item:hover {
+    cursor: pointer;
+}
+
+.trip-item:hover .trip-info {
+    border-color: var(--light-blue);
+}
+
+/*================================= MEDIA ======================================*/
+
+@media screen and (max-width: 1300px) {
+    .trip-item .trip-info .city-name {
+        font-size: 16px;
+    }
+
+    .trip-item .trip-info .time {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .trip-item {
+        min-width: 18vw;
+    }
+
+    .trip-item:last-child {
+        margin-right: 15px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .trip-item .trip-info {
+        padding: 15px;
+    }
+
+    .trip-item .trip-info .city-name {
+        font-size: 15px;
+    }
+
+    .trip-item .trip-info .time {
+        font-size: 11px;
+    }
+
+}
+
+@media screen and (max-width: 901px) {
+    .trip-info button {
+        display: block;
+    }
+
+    .trip-item {
+        min-width: 20vw;
+    }
+
+    .trip-item:last-child {
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 761px) {
+
+    .trip-item {
+        min-width: 26vw;
+    }
+
+    .trip-item:last-child {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+
+    .trip-item {
+        min-width: 38vw;
+    }
+
+    .trip-item:last-child {
+        margin-right: 10px;
+    }
+
+    .trip-info button {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .trip-item {
+        min-width: 35vw;
+    }
+
+    .trip-item .trip-image img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .trip-item .trip-info {
+        padding: 12px;
+    }
+
+    .trip-item .trip-info .city-name {
+        font-size: 14px;
+    }
+
+    .trip-item .trip-info .time {
+        font-size: 10px;
+    }
+}

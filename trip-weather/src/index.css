@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root{
+  --light-gray: rgb(229, 237, 247);
+  --gray: rgb(187, 184, 184);
+  --light-blue: rgb(139, 139, 246);
+  --linear-transition: all .25s linear;
+  --blue: rgb(116, 116, 239);
+  --dark-blue: rgb(4, 4, 80);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.red{
+  color: red;
+}
