@@ -93,7 +93,7 @@ const TodayForecast = () => {
                     <div className={`today-forecase-inner ${selectedTrip && 'open'}`}>
                         <h1>{daysArray[dayNumber]}</h1>
                         <div className="weather-info">
-                            <img src={`../../../dist/images/${weather.days[0].icon}.png`} />
+                            <img src={`/images/${weather.days[0].icon}.png`} />
                             <h1>{weather.days[0].temp} <p>°С</p></h1>
                         </div>
                         <p className='city'>{selectedTrip.city}</p>
