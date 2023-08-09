@@ -26,14 +26,9 @@ export const trips = [
         to: '24.08.2023',
         imageUrl: 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/stockholm-a696fe73b4.jpg'
     },
-    {
-        id: 4,
-        city: "Madrid",
-        from: '09.08.2023',
-        to: '13.08.2023',
-        imageUrl: 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/madrid-ee355b90b3.jpg'
-    },
 ]
+
+localStorage.setItem("trips", JSON.stringify(trips))
 
 
 export const availableCities = [
