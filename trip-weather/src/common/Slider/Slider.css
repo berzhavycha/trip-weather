@@ -110,7 +110,7 @@
     }
 
     .trip-container .slider-container .slider-arrows .next-arrow {
-        right: -115%;
+        right: -113%;
     }
 }
 
@@ -124,13 +124,13 @@
     }
 
     .trip-container .slider-container .slider-arrows .next-arrow {
-        right: -115%;
+        right: -119%;
     }
 }
 
 @media screen and (max-width: 450px) {
     .trip-container .slider-container .slider-arrows .next-arrow {
-        right: -113%;
+        right: -118%;
     }
 
     .slider-container .prev-arrow {

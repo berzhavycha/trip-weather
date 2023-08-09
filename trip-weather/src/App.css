@@ -70,12 +70,13 @@
 
 @media screen and (max-width: 490px) {
   .trips-content h1 {
-    font-size: 25px;
+    font-size: 22px;
+    margin-bottom: 30px;
   }
 }
 
 @media screen and (max-width: 450px) {
   .main-page .trips-content {
-    padding: 40px 45px;
+    padding: 30px 40px;
   }
 }

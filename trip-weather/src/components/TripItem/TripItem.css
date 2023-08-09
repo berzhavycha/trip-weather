@@ -138,9 +138,7 @@
     }
 
     .trip-item .trip-image img {
-        width: 100%;
         height: 150px;
-        object-fit: cover;
     }
 
     .trip-item .trip-info {
@@ -153,5 +151,27 @@
 
     .trip-item .trip-info .time {
         font-size: 10px;
+    }
+
+    .trip-info button {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .trip-item .trip-image img {
+        height: 100px;
+    }
+
+    .trip-item .trip-info {
+        padding: 10px;
+    }
+
+    .trip-item .trip-info .city-name {
+        font-size: 13px;
+    }
+
+    .trip-item .trip-info .time {
+        font-size: 9px;
     }
 }

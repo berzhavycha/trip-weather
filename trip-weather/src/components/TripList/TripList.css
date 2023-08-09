@@ -104,9 +104,46 @@
 }
 
 @media screen and (max-width: 490px) {
+
+    .trip-list-section .trip-search {
+        width: 200px;
+        padding: 5px 5px 5px 35px;
+    }
+
+    .trip-list-section .trip-search input {
+        font-size: 14px;
+    }
+    
+    .trip-list-section .trip-search input::placeholder {
+        font-size: 14px;
+    }
+    
+    .trip-list-section .trip-search span {
+        font-size: 15px;
+    }
+
     .trip-container .add-trip-item {
         min-width: 35vw;
         height: 150px;
+    }  
+
+    .trip-container {
+        gap: 0px;
+    }
+    
+    .trip-container .add-trip-item i {
+        font-size: 20px;
+    }
+    
+    .trip-container .add-trip-item h2 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .trip-container .add-trip-item {
+        min-width: 35vw;
+        height: 100px;
     }  
 
     .trip-container {
