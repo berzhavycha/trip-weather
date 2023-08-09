@@ -83,7 +83,7 @@ const TripForecast = ({ trip }) => {
                             <div className="day-forecast" key={index}>
                                 <p>{daysArray[date.getDay()]}</p>
                                 <div className="weather-icon">
-                                    <img src={`../../../public/images/${day.icon}.png`} />
+                                    <img src={`../../../dist/images/${day.icon}.png`} />
                                 </div>
                                 <p className="temp">
                                     {Math.round(day.tempmax)}&#xb0;/{Math.round(day.tempmin)}&#xb0;
