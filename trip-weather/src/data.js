@@ -35,8 +35,6 @@ export const trips = [
     },
 ]
 
-localStorage.setItem("trips", JSON.stringify(trips))
-
 
 export const availableCities = [
     {
