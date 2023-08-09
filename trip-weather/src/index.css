@@ -29,3 +29,12 @@ img {
 .red{
   color: red;
 }
+
+/*========================== MEDIA ============================*/
+
+@media screen and (max-width: 901px) {
+    body{
+      overflow: visible;
+      overflow-x: hidden;
+    }
+}
