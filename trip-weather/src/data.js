@@ -1,7 +1,3 @@
-export const getImage = async (cityName) => {
-    const data = await (await fetch(`https://api.teleport.org/api/urban_areas/slug:${cityName.toLowerCase()}/images`)).json()
-    return data.photos[0].image.mobile
-}
 
 export const changeDateForm = (string) => {
     const splitDate = string.split('.')
@@ -14,54 +10,54 @@ export const trips = [
         city: "Berlin",
         from: '14.08.2023',
         to: '21.08.2023',
-        imageUrl: await getImage('Berlin')
+        imageUrl: 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/berlin-c96f97c4ba.jpg'
     },
     {
         id: 2,
         city: "Paris",
         from: '11.08.2023',
         to: '16.08.2023',
-        imageUrl: await getImage('Paris')
+        imageUrl: 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/paris-0ae0bb626e.jpg'
     },
     {
         id: 3,
         city: "Stockholm",
         from: '15.08.2023',
         to: '24.08.2023',
-        imageUrl: await getImage('Stockholm')
+        imageUrl: 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/stockholm-a696fe73b4.jpg'
     },
     {
         id: 4,
         city: "Madrid",
         from: '09.08.2023',
         to: '13.08.2023',
-        imageUrl: await getImage('Madrid')
+        imageUrl: 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/madrid-ee355b90b3.jpg'
     },
 ]
 
-// localStorage.setItem("trips", JSON.stringify(trips))
+localStorage.setItem("trips", JSON.stringify(trips))
 
 
 export const availableCities = [
     {
         id: 5,
         city: "Warsaw",
-        imageUrl: await getImage('Warsaw')
+        imageUrl: 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/warsaw-06c037d5b1.jpg'
     },
     {
         id: 6,
         city: "London",
-        imageUrl: await getImage('London')
+        imageUrl: 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/london-12fdfd9fcf.jpg'
     },
     {
         id: 7,
         city: "Dubai",
-        imageUrl: await getImage('Dubai')
+        imageUrl: 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/dubai-89581487e2.jpg'
     },
     {
         id: 8,
         city: "Bucharest",
-        imageUrl: await getImage('Bucharest')
+        imageUrl: 'https://d13k13wj6adfdf.cloudfront.net/urban_areas/bucharest-0baa0f5eaa.jpg'
     },
 ]
 
