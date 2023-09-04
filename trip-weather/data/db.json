@@ -1,0 +1,46 @@
+{
+  "trips": [
+    {
+      "id": 1,
+      "city": "Berlin",
+      "from": "14.08.2023",
+      "to": "21.08.2023",
+      "imageUrl": "https://d13k13wj6adfdf.cloudfront.net/urban_areas/berlin-c96f97c4ba.jpg"
+    },
+    {
+      "id": 2,
+      "city": "Paris",
+      "from": "11.08.2023",
+      "to": "16.08.2023",
+      "imageUrl": "https://d13k13wj6adfdf.cloudfront.net/urban_areas/paris-0ae0bb626e.jpg"
+    },
+    {
+      "id": 3,
+      "city": "Stockholm",
+      "from": "15.08.2023",
+      "to": "24.08.2023",
+      "imageUrl": "https://d13k13wj6adfdf.cloudfront.net/urban_areas/stockholm-a696fe73b4.jpg"
+    },
+    {
+      "id": 5,
+      "city": "Warsaw",
+      "imageUrl": "https://d13k13wj6adfdf.cloudfront.net/urban_areas/warsaw-06c037d5b1.jpg",
+      "from": "10.08.2023",
+      "to": "14.08.2023"
+    },
+    {
+      "id": 6,
+      "city": "London",
+      "imageUrl": "https://d13k13wj6adfdf.cloudfront.net/urban_areas/london-12fdfd9fcf.jpg",
+      "from": "10.08.2023",
+      "to": "15.08.2023"
+    },
+    {
+      "id": 7,
+      "city": "Dubai",
+      "imageUrl": "https://d13k13wj6adfdf.cloudfront.net/urban_areas/dubai-89581487e2.jpg",
+      "from": "12.08.2023",
+      "to": "15.08.2023"
+    }
+  ]
+}

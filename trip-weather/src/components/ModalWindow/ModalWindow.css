@@ -198,11 +198,11 @@
         padding: 10px 20px;
     }
 
-    .modal-window-inner .modal-window-top h2{
+    .modal-window-inner .modal-window-top h2 {
         font-size: 22px;
     }
 
-    .modal-window-inner .modal-window-top button{
+    .modal-window-inner .modal-window-top button {
         font-size: 15px;
     }
 
@@ -213,28 +213,28 @@
     .modal-window-inner .modal-form .form-block label {
         font-size: 15px;
     }
-    
+
     .modal-window-inner .modal-form .form-block select {
         padding: 8px;
     }
-    
+
     .modal-window-inner .modal-form .form-block input {
         padding: 8px;
     }
-    
+
     .modal-window-inner .modal-window-bottom {
         margin-top: 30px;
     }
-    
+
     .modal-window-inner .modal-window-bottom .cancel {
         margin-right: 15px;
         font-size: 14px;
         padding: 7px 15px;
     }
-    
+
     .modal-window-inner .modal-window-bottom .save {
         font-size: 14px;
-        padding: 7px 15px;     
+        padding: 7px 15px;
     }
 }
 

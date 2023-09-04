@@ -2,13 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { useSelectedTripContext } from '../../context/SelectedTripProvider/SelectedTripProvider'
 import { changeDateForm, daysArray } from '../../data'
 import { useTodayForecastContext } from '../../context/TodayForecastProvider/TodayForecastProvider'
-import { useUserContext } from '../../context/UserProvider/UserProvider'
 import './TodayForecast.css'
 
 const API_KEY = 'U5XJCBDPTSVUG54P7988GBW32'
 
 const TodayForecast = () => {
-    const { user } = useUserContext()
     const { selectedTrip } = useSelectedTripContext()
     const { isTodayForecastOpen, closeTodayForecast } = useTodayForecastContext()
 
@@ -83,11 +81,6 @@ const TodayForecast = () => {
     return (
         <div className={`todays-forecast ${isTodayForecastOpen && 'open'}`}>
             {isTodayForecastOpen && <button onClick={closeTodayForecast}><i className="fa-solid fa-xmark"></i></button>}
-            {user && (
-                <div className="user-photo">
-                    <img src={user.picture} />
-                </div>
-            )}
             {selectedTrip && weather ?
                 <>
                     <div className={`today-forecase-inner ${selectedTrip && 'open'}`}>

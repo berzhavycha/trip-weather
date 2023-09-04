@@ -1,28 +1,18 @@
 import React from 'react'
 import { useSelectedTripContext } from '../../context/SelectedTripProvider/SelectedTripProvider'
 import { useTodayForecastContext } from '../../context/TodayForecastProvider/TodayForecastProvider'
-import { useUserContext } from '../../context/UserProvider/UserProvider'
 import './TripItem.css'
 
 const TripItem = ({ trip }) => {
     const { setSelectedTrip } = useSelectedTripContext()
     const { openTodayForecast } = useTodayForecastContext()
-    const { user, setIsLoginOpen } = useUserContext()
 
     const handleTripItemClick = () => {
-        if (!user) {
-            setIsLoginOpen(true)
-        } else {
-            setSelectedTrip(trip)
-        }
+        setSelectedTrip(trip)
     }
 
     const handleSelectTrip = () => {
-        if (!user) {
-            setIsLoginOpen(true)
-        } else {
-            openTodayForecast()
-        }
+        openTodayForecast()
     }
 
     return (
